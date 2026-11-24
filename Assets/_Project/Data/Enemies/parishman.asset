@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2f17e286130314cb7b2c887ccfac34, type: 3}
+  m_Name: parishman
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  id: parishman
+  displayName: Parishman
+  phase: 1
+  hp: 20
+  resSlashing: -20
+  resPiercing: -20
+  resCrushing: 0
+  resAcidic: -10
+  resSaline: 100
+  resDivine: 80
+  resArcane: -40
+  resDebuff: 30
+  resPoisoned: 30
+  resBleeding: 30
+  resBurning: 40
+  cycle1Id: cyc_parishman_torch
+  cycle2Id: 
+  cycle3Id: 
