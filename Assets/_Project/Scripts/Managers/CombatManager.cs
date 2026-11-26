@@ -1,17 +1,30 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance { get; private set; }
 
-    [SerializeField] private float _tickDuration = 1f; // duration in seconds
-
+    [SerializeField] private float _tickDuration = 1f; // duração do tick em segundos
+    [SerializeField] private List<EnemyProperties> _enemies = new();
+    [SerializeField] private List<HeroProperties> _heroes = new();
+    [SerializeField] private HeroCombatant _heroPrefab;
+    [SerializeField] private Transform _heroesPosition;
+    
     public Action OnTick;
     public Action OnCombatStarted;
     public Action OnCombatStopped;
-    
+
+    public bool InCombat => _inCombat;
+    public IReadOnlyList<Combatant> Heroes => _heroesCombatants;
+    public IReadOnlyList<Combatant> Enemies => _enemyCombatants;
+
+    private readonly List<Combatant> _heroesCombatants = new();
+    private readonly List<Combatant> _enemyCombatants = new();
+    private readonly List<Combatant> _targets = new();
+
     private bool _inCombat;
     private Coroutine _tickRoutine;
 
@@ -44,10 +57,22 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+
     public void StartCombat()
     {
         if (_inCombat) return;
-        
+
+        int buttonOffset = 0;
+
+        foreach (HeroProperties hero in _heroes)
+        {
+            HeroCombatant combatant = Instantiate(_heroPrefab, _heroesPosition);
+            combatant.Initialize(hero, buttonOffset);
+            _heroesCombatants.Add(combatant);
+
+            buttonOffset += hero.actions.Count;
+        }
+
         _inCombat = true;
         _tickRoutine = StartCoroutine(TickLoop());
         OnCombatStarted?.Invoke();
@@ -79,6 +104,53 @@ public class CombatManager : MonoBehaviour
             if (!_inCombat) yield break;
 
             OnTick?.Invoke();
+        }
+    }
+    
+    /*private void HandleCombatantDied(Combatant dead)
+    {
+        if (!_inCombat) return;
+        if (!AnyAlive(_enemyCombatants));
+        else if (!AnyAlive(_heroes));
+    }*/
+
+    private static bool AnyAlive(List<Combatant> list)
+    {
+        foreach (Combatant combatant in list)
+        {
+            if (combatant.IsAlive) return true;
+        }
+
+        return false;
+    }
+
+
+    public bool TryExecuteAction(ActionProperties action, Combatant source, Combatant selected)
+    {
+        if (!_inCombat) return false;
+
+        _targets.Clear();
+        _targets.Add(selected != null ? selected : source);
+
+        Execute(action, source, _targets);
+        return true;
+    }
+    
+    public void Execute(ActionProperties action, Combatant source, List<Combatant> targets)
+    {
+        foreach (Combatant target in targets)
+        {
+            if (!target.IsAlive) continue;
+
+            switch (action.damageTypes)
+            {
+                case DamageTypes.Healing:
+                    target.Heal(action.damage);
+                    break;
+                default:
+                    target.TakeDamage(action.damage, action.damageTypes);
+                    break;
+            }
         }
     }
 }

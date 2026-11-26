@@ -7,7 +7,7 @@ public enum CombatTags
 
 public enum DamageTypes
 {
-    Slashing, Piercing, Crushing, Acidic, Saline, Divine, Arcane 
+    Slashing, Piercing, Crushing, Acidic, Saline, Divine, Arcane, Healing
 }
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Actions/ActionProperties", fileName = "ActionProperties")]

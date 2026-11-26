@@ -14,16 +14,15 @@ public class PlayerController : MonoBehaviour
         combat.OnCombatStarted += HandleCombatStarted;
         combat.OnCombatStopped += HandleCombatStopped;
         combat.OnTick += HandleTick;
+        InputManager.Instance.OnButtonPressed += HandleButtonPressed;
     }
 
     private void OnDestroy()
     {
-        if (CombatManager.Instance != null)
-        {
-            CombatManager.Instance.OnCombatStarted -= HandleCombatStarted;
-            CombatManager.Instance.OnCombatStopped -= HandleCombatStopped;
-            CombatManager.Instance.OnTick -= HandleTick;
-        }
+        CombatManager.Instance.OnCombatStarted -= HandleCombatStarted;
+        CombatManager.Instance.OnCombatStopped -= HandleCombatStopped;
+        CombatManager.Instance.OnTick -= HandleTick;
+        InputManager.Instance.OnButtonPressed -= HandleButtonPressed;
     }
 
     private void HandleCombatStarted()
@@ -42,6 +41,11 @@ public class PlayerController : MonoBehaviour
     private void HandleCombatStopped()
     {
         ClearActions();
+    }
+
+    private void HandleButtonPressed(int action)
+    {
+        
     }
 
     private void HandleTick()

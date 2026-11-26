@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HeroProperties
   id: hero_knight
   displayName: Knight
-  actions: []
   hp: 60
   resSlashing: 80
   resPiercing: 50
@@ -27,6 +26,6 @@ MonoBehaviour:
   resPoisoned: 80
   resBleeding: 80
   resBurning: 60
-  cycle1Id: 
-  cycle2Id: 
-  cycle3Id: 
+  actions:
+  - {fileID: 11400000, guid: 9f7daadeaeefd33449cd27f25004d3f7, type: 2}
+  - {fileID: 11400000, guid: 844c625f1143d3040b55ced52af24ff3, type: 2}

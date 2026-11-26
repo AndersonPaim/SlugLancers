@@ -85,15 +85,225 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     public @InputActions()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""version"": 0,
+    ""version"": 1,
     ""name"": ""InputActions"",
-    ""maps"": [],
+    ""maps"": [
+        {
+            ""name"": ""Player"",
+            ""id"": ""8cf99d9f-cc85-432c-a34d-5de3681362fc"",
+            ""actions"": [
+                {
+                    ""name"": ""Action1"",
+                    ""type"": ""Button"",
+                    ""id"": ""34693e45-85cd-4d83-996a-f99899fa541a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Action2"",
+                    ""type"": ""Button"",
+                    ""id"": ""90ad6a3b-abf3-4af9-ae38-608db61429f6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Action3"",
+                    ""type"": ""Button"",
+                    ""id"": ""0c64686f-7672-4868-a4dd-b72a4d373227"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Action4"",
+                    ""type"": ""Button"",
+                    ""id"": ""43c36a17-99a3-4c5b-b151-d03aa9c7b3d2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Action5"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab181bf2-8ad4-44ce-b340-5c8bae1cf325"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Action6"",
+                    ""type"": ""Button"",
+                    ""id"": ""f8832d2e-08a1-4a13-8c73-22bbd1b71549"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Action7"",
+                    ""type"": ""Button"",
+                    ""id"": ""d60c8d30-b3b4-4521-9382-b81a48a6473b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Action8"",
+                    ""type"": ""Button"",
+                    ""id"": ""aed4d3c4-8827-4b52-9c27-8b0c820a4f7a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Action9"",
+                    ""type"": ""Button"",
+                    ""id"": ""159db648-0048-4ea5-ba05-857b33cb9cae"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""194bd535-0fdc-478a-a2ac-376e0ff4683b"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""30a8b13e-f0cb-4bf3-9cbe-4c204aa37f70"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""447b5086-0bd8-4340-8601-ac09c0286ca2"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c63b95fe-b206-43dd-94ff-24b94398c835"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0db643e0-f9af-4c92-ac27-f6b9472fa740"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d241c67b-60a8-4961-b55e-5364c6621a31"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5aaae79f-6c32-4e91-9a69-c555d0573751"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action7"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""80054b9e-1fe4-4696-a459-8ce24e0a6f0e"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8e5db53-8f3f-4638-ba0b-a29126e51647"",
+                    ""path"": ""<Keyboard>/9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Action9"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        }
+    ],
     ""controlSchemes"": []
 }");
+        // Player
+        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_Action1 = m_Player.FindAction("Action1", throwIfNotFound: true);
+        m_Player_Action2 = m_Player.FindAction("Action2", throwIfNotFound: true);
+        m_Player_Action3 = m_Player.FindAction("Action3", throwIfNotFound: true);
+        m_Player_Action4 = m_Player.FindAction("Action4", throwIfNotFound: true);
+        m_Player_Action5 = m_Player.FindAction("Action5", throwIfNotFound: true);
+        m_Player_Action6 = m_Player.FindAction("Action6", throwIfNotFound: true);
+        m_Player_Action7 = m_Player.FindAction("Action7", throwIfNotFound: true);
+        m_Player_Action8 = m_Player.FindAction("Action8", throwIfNotFound: true);
+        m_Player_Action9 = m_Player.FindAction("Action9", throwIfNotFound: true);
     }
 
     ~@InputActions()
     {
+        UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, InputActions.Player.Disable() has not been called.");
     }
 
     /// <summary>
@@ -164,5 +374,260 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     public int FindBinding(InputBinding bindingMask, out InputAction action)
     {
         return asset.FindBinding(bindingMask, out action);
+    }
+
+    // Player
+    private readonly InputActionMap m_Player;
+    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+    private readonly InputAction m_Player_Action1;
+    private readonly InputAction m_Player_Action2;
+    private readonly InputAction m_Player_Action3;
+    private readonly InputAction m_Player_Action4;
+    private readonly InputAction m_Player_Action5;
+    private readonly InputAction m_Player_Action6;
+    private readonly InputAction m_Player_Action7;
+    private readonly InputAction m_Player_Action8;
+    private readonly InputAction m_Player_Action9;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Player".
+    /// </summary>
+    public struct PlayerActions
+    {
+        private @InputActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public PlayerActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action1".
+        /// </summary>
+        public InputAction @Action1 => m_Wrapper.m_Player_Action1;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action2".
+        /// </summary>
+        public InputAction @Action2 => m_Wrapper.m_Player_Action2;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action3".
+        /// </summary>
+        public InputAction @Action3 => m_Wrapper.m_Player_Action3;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action4".
+        /// </summary>
+        public InputAction @Action4 => m_Wrapper.m_Player_Action4;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action5".
+        /// </summary>
+        public InputAction @Action5 => m_Wrapper.m_Player_Action5;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action6".
+        /// </summary>
+        public InputAction @Action6 => m_Wrapper.m_Player_Action6;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action7".
+        /// </summary>
+        public InputAction @Action7 => m_Wrapper.m_Player_Action7;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action8".
+        /// </summary>
+        public InputAction @Action8 => m_Wrapper.m_Player_Action8;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Action9".
+        /// </summary>
+        public InputAction @Action9 => m_Wrapper.m_Player_Action9;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="PlayerActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="PlayerActions" />
+        public void AddCallbacks(IPlayerActions instance)
+        {
+            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+            @Action1.started += instance.OnAction1;
+            @Action1.performed += instance.OnAction1;
+            @Action1.canceled += instance.OnAction1;
+            @Action2.started += instance.OnAction2;
+            @Action2.performed += instance.OnAction2;
+            @Action2.canceled += instance.OnAction2;
+            @Action3.started += instance.OnAction3;
+            @Action3.performed += instance.OnAction3;
+            @Action3.canceled += instance.OnAction3;
+            @Action4.started += instance.OnAction4;
+            @Action4.performed += instance.OnAction4;
+            @Action4.canceled += instance.OnAction4;
+            @Action5.started += instance.OnAction5;
+            @Action5.performed += instance.OnAction5;
+            @Action5.canceled += instance.OnAction5;
+            @Action6.started += instance.OnAction6;
+            @Action6.performed += instance.OnAction6;
+            @Action6.canceled += instance.OnAction6;
+            @Action7.started += instance.OnAction7;
+            @Action7.performed += instance.OnAction7;
+            @Action7.canceled += instance.OnAction7;
+            @Action8.started += instance.OnAction8;
+            @Action8.performed += instance.OnAction8;
+            @Action8.canceled += instance.OnAction8;
+            @Action9.started += instance.OnAction9;
+            @Action9.performed += instance.OnAction9;
+            @Action9.canceled += instance.OnAction9;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="PlayerActions" />
+        private void UnregisterCallbacks(IPlayerActions instance)
+        {
+            @Action1.started -= instance.OnAction1;
+            @Action1.performed -= instance.OnAction1;
+            @Action1.canceled -= instance.OnAction1;
+            @Action2.started -= instance.OnAction2;
+            @Action2.performed -= instance.OnAction2;
+            @Action2.canceled -= instance.OnAction2;
+            @Action3.started -= instance.OnAction3;
+            @Action3.performed -= instance.OnAction3;
+            @Action3.canceled -= instance.OnAction3;
+            @Action4.started -= instance.OnAction4;
+            @Action4.performed -= instance.OnAction4;
+            @Action4.canceled -= instance.OnAction4;
+            @Action5.started -= instance.OnAction5;
+            @Action5.performed -= instance.OnAction5;
+            @Action5.canceled -= instance.OnAction5;
+            @Action6.started -= instance.OnAction6;
+            @Action6.performed -= instance.OnAction6;
+            @Action6.canceled -= instance.OnAction6;
+            @Action7.started -= instance.OnAction7;
+            @Action7.performed -= instance.OnAction7;
+            @Action7.canceled -= instance.OnAction7;
+            @Action8.started -= instance.OnAction8;
+            @Action8.performed -= instance.OnAction8;
+            @Action8.canceled -= instance.OnAction8;
+            @Action9.started -= instance.OnAction9;
+            @Action9.performed -= instance.OnAction9;
+            @Action9.canceled -= instance.OnAction9;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />.
+        /// </summary>
+        /// <seealso cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />
+        public void RemoveCallbacks(IPlayerActions instance)
+        {
+            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="PlayerActions.AddCallbacks(IPlayerActions)" />
+        /// <seealso cref="PlayerActions.RemoveCallbacks(IPlayerActions)" />
+        /// <seealso cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />
+        public void SetCallbacks(IPlayerActions instance)
+        {
+            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="PlayerActions" /> instance referencing this action map.
+    /// </summary>
+    public PlayerActions @Player => new PlayerActions(this);
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="PlayerActions.AddCallbacks(IPlayerActions)" />
+    /// <seealso cref="PlayerActions.RemoveCallbacks(IPlayerActions)" />
+    public interface IPlayerActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Action1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Action2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Action3" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction3(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Action4" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction4(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Action5" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction5(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Action6" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction6(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Action7" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction7(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Action8" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction8(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Action9" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAction9(InputAction.CallbackContext context);
     }
 }
