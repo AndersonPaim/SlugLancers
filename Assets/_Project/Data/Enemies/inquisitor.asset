@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   id: inquisitor
   displayName: Inquisitor
-  phase: 1
   hp: 25
   resSlashing: 15
   resPiercing: 10
@@ -27,6 +26,7 @@ MonoBehaviour:
   resPoisoned: 30
   resBleeding: 40
   resBurning: 50
-  cycle1Id: cyc_inquisitor_strike
-  cycle2Id: 
-  cycle3Id: 
+  phase: 1
+  cycle1Id: {fileID: 11400000, guid: b26b7f6310f40ea4cad93d21cb87811d, type: 2}
+  cycle2Id: {fileID: 0}
+  cycle3Id: {fileID: 0}

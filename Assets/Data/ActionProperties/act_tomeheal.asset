@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionProperties
   id: act_tomeheal
   combatTags: 0
-  damageTypes: 7
-  damage: 10
+  damageTypes: 07000000i
+  damage: 8
   cooldown: 0
   displayName: Curative Psalm

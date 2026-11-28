@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionProperties
   id: act_shellblock
   combatTags: 2
-  damageTypes: 0
+  damageTypes: 
   damage: 0
   cooldown: 0
   displayName: Block

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionProperties
   id: act_acidspit
   combatTags: 3
-  damageTypes: 3
-  damage: 10
+  damageTypes: 03000000i
+  damage: 18
   cooldown: 0
   displayName: Acidic Spew

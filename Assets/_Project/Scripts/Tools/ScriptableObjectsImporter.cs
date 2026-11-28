@@ -11,6 +11,8 @@ using UnityEngine;
 public class ScriptableObjectsImporter : EditorWindow
 {
     static readonly char[] ListSeparator = { '|' };
+    // Listas de enum aceitam '|' e ',' (o Google Sheets exporta chips como "A, B")
+    static readonly char[] EnumListSeparator = { '|', ',' };
 
     static readonly Dictionary<string, string> ColumnAliases =
         new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
@@ -329,7 +331,8 @@ public class ScriptableObjectsImporter : EditorWindow
                 var p = so.FindProperty(col.PropertyPath);
                 if (p == null) continue;
 
-                if (raw.Length == 0)
+                // Célula vazia ou "/" (marcador de vazio da planilha) limpa o campo
+                if (raw.Length == 0 || raw == "/")
                 {
                     ClearProperty(p);
                     continue;
@@ -445,9 +448,12 @@ public class ScriptableObjectsImporter : EditorWindow
 
         if (p.isArray && p.propertyType != SerializedPropertyType.String)
         {
-            var parts = raw.Split(ListSeparator, StringSplitOptions.RemoveEmptyEntries)
-                           .Select(s => s.Trim()).Where(s => s.Length > 0).ToArray();
             var elemType = ElementType(clrType);
+            bool enumList = elemType != null && elemType.IsEnum;
+
+            var parts = raw.Split(enumList ? EnumListSeparator : ListSeparator, StringSplitOptions.RemoveEmptyEntries)
+                           .Select(s => s.Trim()).Where(s => s.Length > 0).ToArray();
+
             p.arraySize = parts.Length;
             for (int i = 0; i < parts.Length; i++)
             {

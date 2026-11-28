@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionProperties
   id: act_potionheal
   combatTags: 0
-  damageTypes: 7
-  damage: 10
+  damageTypes: 07000000i
+  damage: 18
   cooldown: 0
   displayName: Potion

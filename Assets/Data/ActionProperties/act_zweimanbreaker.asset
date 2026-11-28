@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionProperties
   id: act_zweimanbreaker
   combatTags: 3
-  damageTypes: 2
-  damage: 0
+  damageTypes: 0000000002000000i
+  damage: 18
   cooldown: 0
   displayName: Man-Breaker

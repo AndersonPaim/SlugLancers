@@ -12,10 +12,14 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private List<HeroProperties> _heroes = new();
     [SerializeField] private HeroCombatant _heroPrefab;
     [SerializeField] private Transform _heroesPosition;
+    [SerializeField] private EnemyCombatant _enemyPrefab;
+    [SerializeField] private Transform _enemiesPosition;
     
     public Action OnTick;
     public Action OnCombatStarted;
     public Action OnCombatStopped;
+
+    [HideInInspector] public Combatant SelectedCombatant;
 
     public bool InCombat => _inCombat;
     public IReadOnlyList<Combatant> Heroes => _heroesCombatants;
@@ -72,6 +76,13 @@ public class CombatManager : MonoBehaviour
 
             buttonOffset += hero.actions.Count;
         }
+        
+        foreach (EnemyProperties enemy in _enemies)
+        {
+            EnemyCombatant combatant = Instantiate(_enemyPrefab, _enemiesPosition);
+            combatant.Initialize(enemy, buttonOffset);
+            _enemyCombatants.Add(combatant);
+        }
 
         _inCombat = true;
         _tickRoutine = StartCoroutine(TickLoop());
@@ -125,14 +136,19 @@ public class CombatManager : MonoBehaviour
     }
 
 
-    public bool TryExecuteAction(ActionProperties action, Combatant source, Combatant selected)
+    public bool TryExecuteAction(ActionProperties action, Combatant source, List<Combatant> targets)
     {
         if (!_inCombat) return false;
 
-        _targets.Clear();
-        _targets.Add(selected != null ? selected : source);
+        if (SelectedCombatant != null && source.GetComponent<HeroCombatant>())
+        {
+            if (action.damageTypes.Contains(DamageTypes.Healing) && SelectedCombatant.GetComponent<EnemyCombatant>())
+                return false; //cant heal enemies
+            if (!action.damageTypes.Contains(DamageTypes.Healing) && SelectedCombatant.GetComponent<HeroCombatant>())
+                return false; //cant damage allies
+        }
 
-        Execute(action, source, _targets);
+        Execute(action, source, targets);
         return true;
     }
     
@@ -142,14 +158,13 @@ public class CombatManager : MonoBehaviour
         {
             if (!target.IsAlive) continue;
 
-            switch (action.damageTypes)
+            if (action.damageTypes.Contains(DamageTypes.Healing))
             {
-                case DamageTypes.Healing:
-                    target.Heal(action.damage);
-                    break;
-                default:
-                    target.TakeDamage(action.damage, action.damageTypes);
-                    break;
+                target.Heal(action.damage);
+            }
+            else
+            {
+                target.TakeDamage(action.damage, action.damageTypes);
             }
         }
     }

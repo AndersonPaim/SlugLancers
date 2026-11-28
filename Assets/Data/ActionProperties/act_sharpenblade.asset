@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionProperties
   id: act_sharpenblade
   combatTags: 0
-  damageTypes: 0
+  damageTypes: 
   damage: 0
   cooldown: 0
   displayName: Sharpen Blade

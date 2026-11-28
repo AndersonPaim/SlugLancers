@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class CombatantProperties : ScriptableObject
@@ -6,7 +7,7 @@ public abstract class CombatantProperties : ScriptableObject
     public string displayName;
 
     [Header("Status")]
-    public float hp;
+    public int hp;
 
     [Header("Resistences")]
     public int resSlashing;
@@ -32,4 +33,22 @@ public abstract class CombatantProperties : ScriptableObject
         DamageTypes.Arcane   => resArcane,
         _ => 0
     };
+    
+    public float GetTotalDTR(IReadOnlyList<DamageTypes> damageTypes)
+    {
+        float remaining = 1f;
+
+        foreach (DamageTypes type in damageTypes)
+        {
+            float resistance = Mathf.Clamp(GetResistance(type), -100, 100) / 100f;
+            remaining *= 1f - resistance;
+        }
+
+        return (1f - remaining) * 100f;
+    }
+
+    public float GetDamageModifier(IReadOnlyList<DamageTypes> damageTypes)
+    {
+        return 1f - GetTotalDTR(damageTypes) / 100f;
+    }
 }

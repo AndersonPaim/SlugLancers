@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum CombatTags
@@ -15,7 +16,7 @@ public class ActionProperties : ScriptableObject
 {
     public string id;
     public CombatTags combatTags;
-    public DamageTypes damageTypes;
+    public List<DamageTypes> damageTypes = new();
     public float damage;
     public float cooldown;
     public string displayName;

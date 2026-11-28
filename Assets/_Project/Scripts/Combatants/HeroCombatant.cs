@@ -40,7 +40,7 @@ public class HeroCombatant : Combatant, IDisposable
         InputManager.Instance.OnButtonPressed -= HandleButtonPressed;
     }
 
-    private void HandleTick()
+    protected override void HandleTick()
     {
         foreach (ActionSlot slot in _slots) slot.Tick();
     }
@@ -55,16 +55,18 @@ public class HeroCombatant : Combatant, IDisposable
         ActionSlot slot = _slots[index];
         if (!slot.IsReady) return;
         
-        if (CombatManager.Instance.TryExecuteAction(slot.Action, this, SelectedTarget))
+        List<Combatant> targets = new() { CombatManager.Instance.SelectedCombatant };
+        
+        if (CombatManager.Instance.TryExecuteAction(slot.Action, this, targets))
         {
             Debug.Log($"START COOLDOWN: " + slot.Action.cooldown);
             slot.StartCooldown();
         }
     }
 
-    public override void TakeDamage(float amount, DamageTypes type)
+    public override void TakeDamage(float amount, List<DamageTypes> damageTypes)
     {
-        base.TakeDamage(amount, type);
+        base.TakeDamage(amount, damageTypes);
         UpdateUI();
     }
 

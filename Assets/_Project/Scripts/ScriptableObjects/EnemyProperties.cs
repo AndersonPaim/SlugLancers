@@ -6,7 +6,7 @@ public class EnemyProperties : CombatantProperties
     public int phase;
 
     [Header("Cycles")]
-    public string cycle1Id;
-    public string cycle2Id;
-    public string cycle3Id;
+    public ActionCyclesProperties cycle1Id;
+    public ActionCyclesProperties cycle2Id;
+    public ActionCyclesProperties cycle3Id;
 }

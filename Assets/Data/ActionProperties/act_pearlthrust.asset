@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionProperties
   id: act_pearlthrust
   combatTags: 1
-  damageTypes: 1
+  damageTypes: 01000000i
   damage: 12
   cooldown: 0
   displayName: Lance Thrust
